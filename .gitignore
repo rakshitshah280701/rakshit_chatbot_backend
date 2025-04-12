@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+venv/
+
+# LangChain & FAISS
+vectorstore/
+*.faiss
+*.pkl
+
+# Logs
+*.log
+
+# Editor & OS files
+.vscode/
+.DS_Store
+.ipynb_checkpoints/
+
+# Ollama (optional - local model cache)
+~/.ollama/
