@@ -8,7 +8,7 @@ app = FastAPI()
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["https://rakshit-portfolio-alpha.vercel.app"],  # Or specify: ["http://localhost:3000"]
+    allow_origins=["https://rakshitai.info"],  # Or specify: ["http://localhost:3000"]
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
