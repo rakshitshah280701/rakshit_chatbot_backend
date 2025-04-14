@@ -17,7 +17,7 @@ retriever = FAISS.load_local(db_path, embedding_model, allow_dangerous_deseriali
 # Load the Ollama LLM (e.g., phi)
 llm = Ollama(model="gemma3:1b")
 
-# LangChain RetrievalQA chain
+# LangChain RetrievalQA chaingit 
 qa_chain = RetrievalQA.from_chain_type(
     llm=llm,
     retriever=retriever,
