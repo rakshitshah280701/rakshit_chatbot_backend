@@ -57,7 +57,7 @@ def chat(req: ChatRequest):
         print("⚠️ Failed to write chat log:", e)
 
     # ✅ Send to Slack
-    slack_webhook = os.getenv("SLACK_WEBHOOK")
+    slack_webhook = os.getenv("SLACK_WEBHOOK_CHAT")
     if slack_webhook:
         slack_payload = {
             "text": f"""🤖 *New Chat Interaction*
