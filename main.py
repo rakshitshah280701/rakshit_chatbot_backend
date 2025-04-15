@@ -1,5 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from datetime import datetime
+from pathlib import Path
 
 from pydantic import BaseModel
 from llm_pipeline import generate_response
@@ -25,5 +27,6 @@ def root():
 
 @app.post("/chat")
 def chat(req: ChatRequest):
+    Path("last_ping.txt").write_text(datetime.utcnow().isoformat())
     response = generate_response(req.question)
     return {"answer": response}
