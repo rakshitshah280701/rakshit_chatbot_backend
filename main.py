@@ -27,6 +27,7 @@ def root():
 
 @app.post("/chat")
 def chat(req: ChatRequest):
-    Path("last_ping.txt").write_text(datetime.utcnow().isoformat())
+    with open("/root/rakshit_chatbot_backend/last_ping.txt", "w") as f:
+        f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
     response = generate_response(req.question)
     return {"answer": response}
