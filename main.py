@@ -27,7 +27,11 @@ def root():
 
 @app.post("/chat")
 def chat(req: ChatRequest):
-    with open("/root/rakshit_chatbot_backend/last_ping.txt", "w") as f:
-        f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+    try:
+        # ✅ Append timestamp to log instead of overwriting
+        with open("/root/rakshit_chatbot_backend/last_ping.txt", "a") as f:
+            f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
+    except Exception as e:
+        print("⚠️ Failed to write ping log:", e)
     response = generate_response(req.question)
     return {"answer": response}
