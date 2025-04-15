@@ -76,9 +76,8 @@ def chat(req: ChatRequest):
 @app.get("/ping")
 def ping():
     try:
-        with open("/root/rakshit_chatbot_backend/last_ping.txt", "w") as f:
-            f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
-        return {"status": "pong"}
+        with open("/root/rakshit_chatbot_backend/last_ping.txt", "a") as f:
+            f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
     except Exception as e:
-        print("⚠️ Failed to write ping log:", e)
-        return {"status": "error", "message": str(e)}
+        print("❌ Failed to write ping:", e)
+    return {"status": "pong"}
