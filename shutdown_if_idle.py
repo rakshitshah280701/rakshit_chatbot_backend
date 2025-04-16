@@ -10,7 +10,8 @@ def log_debug(msg):
 
 def get_active_connections():
     try:
-        output = subprocess.check_output("ss -Htn sport = :443", shell=True).decode()
+        output = subprocess.check_output("ss -Htn sport = :8000", shell=True).decode()
+
         return [line for line in output.strip().split("\n") if line]
     except Exception as e:
         log_debug(f"❌ Failed to get active connections: {e}")
