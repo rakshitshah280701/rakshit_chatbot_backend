@@ -49,6 +49,8 @@ IDLE_THRESHOLD_MINUTES = 5  # Shutdown if idle for this many minutes
 
 def log_debug(message):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    full_msg = f"{timestamp} - {message}"
+    print(full_msg)
     with open(DEBUG_LOG, "a") as f:
         f.write(f"{timestamp} - {message}\n")
 
