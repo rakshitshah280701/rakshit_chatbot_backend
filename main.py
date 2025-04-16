@@ -2,6 +2,8 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from datetime import datetime
 from pathlib import Path
+from activity_tracker import update_last_activity
+
 
 from pydantic import BaseModel
 from llm_pipeline import generate_response
@@ -74,15 +76,14 @@ def chat(req: ChatRequest):
     return {"answer": answer}
 
 @app.get("/ping")
-def ping():
+def ping(**kwargs):
     now = datetime.now()
     try:
         with open("/root/rakshit_chatbot_backend/last_ping.txt", "a") as f:
-            f.write(now.strftime("%Y-%m-%d %H:%M:%S") + " 🔥 from /ping\n")
-            f.flush()
-            os.fsync(f.fileno())
+            f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
+            
     except Exception as e:
-        with open("/root/rakshit_chatbot_backend/last_ping.txt", "a") as f:
-            f.write(f"{now} ❌ Exception: {e}\n")
+        with open("/root/rakshit_chatbot_backend/error_log.txt", "a") as error_f:
+            error_f.write(f"{now} ❌ Exception: {e}\n")
     return {"status": "pong"}
 
