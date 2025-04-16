@@ -43,8 +43,10 @@ def root():
 def chat(req: ChatRequest):
     try:
         # ✅ Append timestamp to last_ping.txt
-        with open("/root/rakshit_chatbot_backend/last_ping.txt", "a") as f:
-            f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
+        # with open("/root/rakshit_chatbot_backend/last_ping.txt", "a") as f:
+        #     f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
+        update_last_activity()
+
     except Exception as e:
         print("⚠️ Failed to write ping log:", e)
 
@@ -78,12 +80,8 @@ def chat(req: ChatRequest):
 @app.get("/ping")
 def ping(**kwargs):
     now = datetime.now()
-    try:
-        with open("/root/rakshit_chatbot_backend/last_ping.txt", "a") as f:
-            f.write(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + "\n")
-            
-    except Exception as e:
-        with open("/root/rakshit_chatbot_backend/error_log.txt", "a") as error_f:
-            error_f.write(f"{now} ❌ Exception: {e}\n")
+    update_last_activity()
+
+    
     return {"status": "pong"}
 
