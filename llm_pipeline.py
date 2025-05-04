@@ -96,7 +96,7 @@ embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-Mi
 # FAISS DB setup
 db_path = "vectorstore/faiss_db"
 index_file = os.path.join(db_path, "index.faiss")
-text_file = "data/rakshit_profile1.txt"
+text_file = "data/rakshit_profile.txt"
 
 # Build FAISS index if not found
 if not os.path.exists(index_file):
