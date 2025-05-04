@@ -1,18 +1,72 @@
-Rakshit Shah is a Data Scientist and Machine Learning Engineer currently based in San Jose, California. He holds a Bachelor of Engineering in Computer Engineering from AP Shah Institute of Technology, University of Mumbai, India, where he graduated in June 2023 with an impressive GPA of 8.72 out of 10. Currently, Rakshit is pursuing a Master of Science in Computer Science at California State University, East Bay, with an expected graduation date of May 2025. He has maintained a strong academic record, achieving a GPA of 3.74 out of 4.00.
+Rakshit Shah is a 24-year-old Data Scientist and Machine Learning Engineer currently based in San Jose, California. With a passion for responsible and explainable AI, he serves as a technical leader in various AI and machine learning domains. He holds a Bachelor of Engineering in Computer Engineering from AP Shah Institute of Technology, University of Mumbai, India, where he graduated in June 2023 with a GPA of 8.72 out of 10. Currently, Rakshit is pursuing a Master of Science in Computer Science at California State University, East Bay, with an expected graduation date of May 2025. He has maintained a strong academic record, achieving a GPA of 3.74 out of 4.00. His professional portfolio and projects can be viewed on his GitHub (https://github.com/rakshitshah280701) and LinkedIn (https://www.linkedin.com/in/rakshitshah28/) profiles, where he shares his work and research findings.
 
-Rakshit has cultivated a robust foundation in several programming languages, including Python, R, SQL, Java, and C++. His expertise extends across a wide array of technologies, including TensorFlow, PyTorch, and Keras, particularly in the areas of Deep Learning and Natural Language Processing (NLP). He is proficient with various machine learning methodologies, encompassing supervised and unsupervised learning, regression, classification, clustering, decision trees, and random forest models. His knowledge also spans the use of advanced frameworks like Hugging Face Transformers, NLTK, OpenCV, and YOLO for computer vision tasks.
+Rakshit has cultivated a robust foundation in several programming languages and frameworks, demonstrating versatility across different domains. His programming expertise spans Python, R, SQL, Java, Kotlin, C++, and JavaScript, with a proven ability to develop both frontend and backend systems.
+
+His machine learning and AI skills are particularly noteworthy, encompassing:
+• Deep Learning frameworks (TensorFlow, PyTorch, Keras) for implementing LSTM/GRU models, CNNs, and custom neural networks
+• Advanced Large Language Model (LLM) expertise, including:
+  - Fine-tuning and optimizing foundation models (Gemma, Llama, GPT variants)
+  - Implementing Reinforcement Learning from Human Feedback (RLHF) pipelines
+  - Designing prompt engineering strategies for specialized domains
+  - Creating efficient context-aware retrieval systems for domain-specific knowledge
+• Natural Language Processing with Hugging Face Transformers, LangChain, and advanced RAG architectures
+• Specialized knowledge in vector embeddings and semantic search optimization for LLM applications
+• Computer Vision applications using OpenCV, YOLO, and TensorFlow Lite for mobile deployment
+• Healthcare analytics with predictive modeling for vital organ health assessment
+
+His full-stack development capabilities include Flask for backend API development, Android development with Kotlin, and interactive data visualization with Plotly and Bootstrap. He has demonstrated proficiency in MLOps practices through his implementation of model deployment pipelines, containerization with Docker, and cloud integration.
+
+Rakshit excels at applying these technical skills to diverse domains including finance (stock market prediction), healthcare (organ health prediction), accessibility (sign language detection), and conversational AI (research paper and personal assistant chatbots). This cross-domain expertise allows him to tackle complex real-world problems with an interdisciplinary approach.
 
 He has extensive experience with Vector Databases and Retrieval-Augmented Generation (RAG), specifically using FAISS, Pinecone, and ChromaDB, as well as proficiency in MLOps and model deployment through Docker, Kubernetes, FastAPI, Flask, Streamlit, and comprehensive CI/CD pipelines. Rakshit is adept at utilizing databases such as MySQL, PostgreSQL, MongoDB, and Firebase to effectively manage data.
 
-Professionally, Rakshit has demonstrated significant practical experience. As a Student Assistant in the Computer Science Department at CSU East Bay, he researched and implemented a custom neural network from scratch, developing original algorithms for biases, thresholds, forward, and backward propagation. He also trained advanced YOLO models (YOLOv5 and YOLOv8) for underwater object detection tasks, significantly enhancing detection precision across multiple test scenarios. Rakshit played a pivotal role in troubleshooting image preprocessing and model training bottlenecks, while actively mentoring junior student assistants by assisting them with technical setups and integration issues.
+Professionally, Rakshit has built a strong track record of practical accomplishments. At CSU East Bay as a Student Assistant in the Computer Science Department, he lead research implementation in several key areas:
+• Designing and implementing custom neural networks from scratch, including developing novel algorithms for biases, thresholds, and propagation techniques
+• Training and optimizing advanced YOLO models (YOLOv5/YOLOv8) for underwater object detection, achieving significant improvements in precision metrics across diverse testing environments
+• Resolving complex technical challenges in image preprocessing and model training pipelines
+• Mentoring junior researchers and providing technical guidance on project implementation
 
-Previously, as a Data Collection Intern at Sciffer Analytics Pvt. Ltd in Pune, India, Rakshit developed automated web scraping tools using BeautifulSoup and Selenium, successfully extracting over 50,000 images to generate high-quality datasets for machine learning applications. His diligent work in building and maintaining annotation pipelines contributed to a notable 15% improvement in YOLO model accuracy. Additionally, he automated critical data processing workflows and collaborated closely with data scientists to enhance dataset quality and resolve labeling discrepancies, further showcasing his leadership capabilities by mentoring junior interns throughout their projects.
 
-Rakshit actively contributes to the technical community through volunteer work. Serving in leadership positions such as Chairperson and Vice Chair at the IEEE APSIT Student Branch from 2021 to 2023, he organized and promoted numerous professional growth initiatives. He also significantly contributed to IEEE Region 10 Symposium and the IEEE Bombay Section Student Activities Committee, enhancing engagement through visually compelling design work as the Design Lead.
+Previously, at Sciffer Analytics Pvt. Ltd in Pune, India, Rakshit demonstrated his ability to solve data-centric challenges:
+• Developed high-efficiency web scraping systems using BeautifulSoup and Selenium that collected over 50,000 high-quality images for ML training datasets
+• Engineered annotation pipelines that improved YOLO model accuracy by 15% through systematic enhancement of training data quality
+• Automated critical data preprocessing workflows, reducing manual intervention and increasing throughput
+• Collaborated with cross-functional teams to resolve complex data quality issues while providing mentorship to junior team members
 
-His project portfolio includes noteworthy initiatives like "InstructAware," developed at CSU East Bay, where he constructed a Transformer-based scene understanding model aimed at generating instructional narrations for situational awareness, particularly beneficial for low-vision individuals. Rakshit skillfully integrated Large Language Models (LLMs) fine-tuned through reinforcement learning from human feedback (RLHF) to improve narrative accuracy. He addressed complex technical issues involving object detection and text extraction, optimizing the system’s performance using advanced evaluation metrics such as BLEURT, METEOR, COMET, and SBERT+Cosine scoring.
+These experiences highlight Rakshit's technical expertise alongside his ability to solve complex problems, mentor colleagues, and deliver measurable improvements to AI systems.
 
-Another innovative project, the "Research Paper Summarizer," utilizes LLMs to efficiently summarize academic research, significantly improving user engagement by accurately extracting and simplifying complex document contents. He also designed a real-time Sign Detection Android App utilizing YOLOv8, Java, OpenCV, and TensorFlow Lite, successfully deploying bounding box detection algorithms and creating an intuitive, user-friendly interface. Additionally, his "Vital Organ Health Prediction" project involved developing advanced machine learning models, including CNNs and logistic regression, to analyze medical data and classify heart health and medical imagery, integrated effectively into interactive Flask-based applications.
+Rakshit actively contributes to the technical community through volunteer work. He has served as Chairperson and Vice Chair at the IEEE APSIT Student Branch from 2021 to 2023, he spearheaded initiatives that significantly expanded membership engagement in his student branch:
+• Organized technical workshops, hackathons, and professional development seminars (you can visit @ieeeapsit on instagram) reaching over 500 engineering students 
+• Led a team of 15 student officers in planning and executing events that bridged academic learning with industry practices
+• Successfully secured sponsorships and partnerships and helped his student branch improve their reach.
 
-Rakshit Shah is deeply passionate about advancing responsible and explainable AI (XAI), demonstrating both practical application and theoretical understanding, underscored by his research publications in IEEE Xplore on Time Series Analysis and Audio Signal Processing. He aims to leverage his robust skill set in Data Science, MLOps, NLP, Generative AI, and Large Language Models in dynamic, innovation-driven organizations.
+His contributions extended regionally as he played key roles in the IEEE Region 10 Symposium and IEEE Bombay Section Student Activities Committee:
+• Created visually compelling design work that enhanced brand identity and communication effectiveness
+• Developed digital content strategies that increased event participation and online engagement
+• Mentored student leaders from other institutions on best practices for technical community building
+
+These leadership experiences demonstrate Rakshit's ability to inspire teams, manage complex projects, and create meaningful professional development opportunities within technical communities.
+
+Rakshit's project portfolio showcases versatility across multiple domains:
+
+"InstructAware" (CSU East Bay): A Transformer-based scene understanding model generating instructional narrations for low-vision individuals. Rakshit integrated Large Language Models fine-tuned through reinforcement learning from human feedback (RLHF) to improve narrative accuracy, addressing complex technical challenges in object detection and text extraction while optimizing system performance with advanced evaluation metrics.
+
+"StockSage": A machine learning-powered web application for stock market prediction that uses custom-trained LSTM/GRU models to forecast next-day closing prices for NSE stocks. The system incorporates technical indicators (RSI, MACD, Bollinger Bands), aggregates market news, and visualizes data through interactive Plotly charts, demonstrating Rakshit's ability to combine financial domain knowledge with ML expertise.
+
+"SmartSignNavigation-Android": A real-time sign language detection mobile application utilizing YOLOv8 object detection, TensorFlow Lite for on-device inference, and native Android development in Kotlin. This accessibility-focused app showcases Rakshit's skills in mobile development and optimizing ML models for resource-constrained environments.
+
+"Personal Assistant Chatbot": A sophisticated backend system implementing Retrieval-Augmented Generation with FAISS vector database and LLM integration, deployed as an interactive assistant on Rakshit's portfolio website. This project highlights his expertise in modern NLP architectures, vector embeddings, and API development with FastAPI.
+
+"Vital Organ Health Predictor": A healthcare application employing multiple machine learning models (CNNs, logistic regression) to analyze medical data and classify heart health. The interactive Flask-based web interface demonstrates Rakshit's ability to apply AI to critical healthcare challenges while creating accessible user experiences.
+
+"Research Paper Summarizer": An LLM-powered tool that efficiently extracts and simplifies complex academic content, improving user engagement through accurate document summarization and highlighting Rakshit's focus on practical applications of generative AI.
+
+Rakshit Shah is deeply passionate about advancing responsible and explainable AI (XAI), a commitment evidenced through both his practical implementations and theoretical research. His publications in IEEE Xplore on Time Series Analysis and Audio Signal Processing demonstrate his ability to contribute to the academic discourse while developing practical applications.
+
+Looking forward, Rakshit aims to work in roles where he can apply his interdisciplinary expertise in Data Science, MLOps, NLP, Generative AI, and Large Language Models to solve meaningful problems. He is particularly interested in:
+• Developing AI systems that prioritize transparency, fairness, and human-centered design
+• Creating scalable machine learning solutions that bridge research innovations with production-ready applications
+• Contributing to teams that value both technical excellence and ethical considerations in AI deployment
+
+With his proven track record across multiple domains, strong technical foundation, and dedication to responsible AI practices, Rakshit is well-positioned to make significant contributions to forward-thinking organizations that prioritize innovation and ethical AI development.
 
