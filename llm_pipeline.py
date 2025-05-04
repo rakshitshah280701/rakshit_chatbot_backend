@@ -97,6 +97,9 @@ db_path = "vectorstore/faiss_db"
 index_file = os.path.join(db_path, "index.faiss")
 text_file = "data/rakshit_profile.txt"
 
+# Global memory for conversation
+conversation_history = []
+
 # Function to load and split document with structure-aware chunking
 def load_and_split_document(filepath):
     full_text = Path(filepath).read_text(encoding='utf-8')
@@ -142,15 +145,15 @@ else:
 retriever = db.as_retriever(search_kwargs={"k": 5})  # FAISS-only retrieval
 llm = Ollama(model="gemma3:1b")
 
-qa_chain = RetrievalQA.from_chain_type(
-    llm=llm,
-    retriever=retriever,
-    chain_type="stuff"
-)
-
-# Query function
-def generate_response(user_question: str) -> str:
+# Chat-aware response function
+def generate_response(user_question: str, reset: bool = False) -> str:
     try:
+        global conversation_history
+
+        if reset:
+            conversation_history = []
+            print("🔄 Conversation history reset.")
+
         docs = retriever.invoke(user_question)
         print("\n🔍 Retrieved Chunks from FAISS:")
         for i, doc in enumerate(docs):
@@ -160,23 +163,35 @@ def generate_response(user_question: str) -> str:
                 print("📌 Metadata:", doc.metadata)
 
         context = "\n\n".join([doc.page_content for doc in docs])
-        prompt = f"""
-        You are Rakshit's intelligent assistant. Use the context below to answer the user's question.
+
+        # Build conversation memory
+        history_prompt = ""
+        for turn in conversation_history:
+            history_prompt += f"User: {turn['user']}\nAssistant: {turn['assistant']}\n"
+
+        # Append current user question
+        full_prompt = f"""
+        You are Rakshit's intelligent assistant. Use the following conversation and context to answer the user.
 
         Context:
         {context}
 
-        Question: {user_question}
-
-        Answer:
+        Conversation:
+        {history_prompt}User: {user_question}\nAssistant:
         """
-        response = llm.invoke(prompt)
+
+        response = llm.invoke(full_prompt.strip())
         print("\n🧠 Final LLM Response:\n", response)
-        return response
+
+        # Save the turn to history
+        conversation_history.append({"user": user_question, "assistant": response.strip()})
+
+        return response.strip()
 
     except Exception as e:
         return f"❌ Error during response generation: {str(e)}"
 
 if __name__ == "__main__":
     print("✅ LLM pipeline ready. Use `generate_response()` from your FastAPI app or CLI.")
+
 
