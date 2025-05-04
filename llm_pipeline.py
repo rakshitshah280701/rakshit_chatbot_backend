@@ -124,19 +124,16 @@ def load_and_split_document(filepath):
 
 # Function to embed and store into FAISS
 def embed_and_store(chunks, db_path="vectorstore/faiss_db"):
-    if not os.path.exists(index_file):
-        Path("vectorstore").mkdir(exist_ok=True)
-        db = FAISS.from_documents(chunks, embedding_model)
-        db.save_local(db_path)
-        print("✅ Created and saved FAISS DB with metadata.")
-    else:
-        print("⚠️ FAISS DB already exists!")
+    db = FAISS.from_documents(chunks, embedding_model)
+    db.save_local(db_path)
+    print("✅ Created and saved FAISS DB with metadata.")
+    return db
 
 # Main: Create or Load DB
 if not os.path.exists(index_file):
     print("⚠️ FAISS index not found. Creating it...")
     chunks = load_and_split_document(text_file)
-    embed_and_store(chunks)
+    db = embed_and_store(chunks)
 else:
     print("✅ FAISS index found. Loading...")
     db = FAISS.load_local(db_path, embedding_model, allow_dangerous_deserialization=True)
@@ -182,3 +179,4 @@ def generate_response(user_question: str) -> str:
 
 if __name__ == "__main__":
     print("✅ LLM pipeline ready. Use `generate_response()` from your FastAPI app or CLI.")
+
