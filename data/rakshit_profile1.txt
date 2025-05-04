@@ -1,0 +1,103 @@
+Personal Summary
+Rakshit Shah is a 24-year-old Data Scientist and Machine Learning Engineer currently based in San Jose, California. He is passionate about building responsible and explainable AI systems that solve real-world problems.
+
+- Education:
+  - M.S. in Computer Science – California State University, East Bay (Expected May 2025), GPA: 3.74/4.00
+  - B.E. in Computer Engineering – AP Shah Institute of Technology, Mumbai University (June 2023), GPA: 8.72/10
+
+- Profiles:
+  - GitHub: https://github.com/rakshitshah280701
+  - LinkedIn: https://www.linkedin.com/in/rakshitshah28/
+
+Technical Skills
+- Languages: Python, R, SQL, Java, Kotlin, C++, JavaScript
+- Frameworks: TensorFlow, PyTorch, Keras, LangChain, HuggingFace Transformers
+- Concepts: LLMs, RAG, NLP, RLHF, Deep Learning, MLOps
+- Databases: FAISS, Pinecone, ChromaDB, MySQL, PostgreSQL, MongoDB, Firebase
+- DevOps/MLOps: Docker, Kubernetes, CI/CD, FastAPI, Flask, Streamlit
+- Others: OpenCV, YOLOv8, TensorFlow Lite, Plotly, Bootstrap
+
+Internships & Research
+Student Assistant @ CSU East Bay
+- Trained advanced YOLOv8 models for underwater object detection
+- Built neural networks from scratch with custom bias and threshold strategies
+- Mentored junior researchers and streamlined model integration pipelines
+
+ML Intern @ Sciffer Analytics, Pune
+- Scraped 50,000+ labeled images using BeautifulSoup/Selenium for YOLO training
+- Boosted accuracy of object detection models by 15%
+- Designed preprocessing workflows and optimized annotation pipelines
+
+Leadership & Volunteering
+Chairperson & Vice Chair – IEEE APSIT Student Branch
+- Organized 20+ tech events for 500+ students
+- Managed a 15-member team and grew engagement through social media campaigns
+
+Design Lead – IEEE Bombay Section / Region 10
+- Designed branding and digital content for large-scale symposiums
+- Mentored other student branches in best practices
+
+Project Portfolio (In-Depth)
+
+1. InstructAware – Instructional Scene Understanding for Visually Impaired
+Built at CSU East Bay, this system enhances accessibility through instructional narration generation.
+- Object detection via YOLOv8
+- OCR extraction using Google ML Kit
+- Instructional language generated using RLHF-tuned LLMs (T5, GPT-3.5, DeepSeek)
+- Multimodal input processing (image + bounding box + text)
+- Evaluation via BLEURT, METEOR, USE, BERTScore, COMET
+- Result: End-to-end pipeline generating human-like, contextually aware narrations for low-vision navigation use cases
+
+2. StockSage – NSE Stock Price Prediction Dashboard
+An intelligent dashboard to predict next-day close prices for Indian stocks.
+- GRU-based time series forecasting for individual tickers
+- Technical indicators: RSI, MACD, Bollinger Bands, SMA
+- Real-time news from NewsData.io API
+- Candlestick visualizations via Plotly
+- Personalized caching of models per ticker
+- FAISS integration planned for semantic search of financial insights
+- Deployed using Flask + Bootstrap frontend
+
+3. SmartSignNavigation (Android App)
+Real-time Android app for scanning road signs and shop names.
+- Live camera feed processed via CameraX API
+- Object detection with YOLOv8, optimized for TFLite
+- OCR using Google ML Kit
+- Bounding box overlay + voice narration for accessibility
+- Kotlin + Android Studio with GPU acceleration and memory-optimized inference
+
+4. Personal Assistant Chatbot
+A personal chatbot answering questions about Rakshit using RAG.
+- FAISS-based vector store created from `rakshit_profile.txt`
+- LangChain RetrievalQA pipeline
+- Ollama-hosted LLM (e.g., Gemma3:1b) via local inference
+- Deployed using FastAPI backend + React frontend (www.rakshitai.info)
+- Supports conversational memory and semantic chunk retrieval
+
+5. Vital Organ Health Predictor (Healthcare AI Web App)
+Analyzes heart health and organ status from patient vitals.
+- Data preprocessing, outlier handling, and imputation
+- Multiple model comparison: CNN, logistic regression, SVM
+- Real-time prediction with probability outputs
+- UI built with Flask and hosted on lightweight server
+- Addresses real-world healthcare diagnostic assistance use case
+
+6. Research Paper Summarizer (LLM-based)
+Summarizes complex scientific PDFs and supports QA.
+- Used T5 for summarization; plans to upgrade to DeepSeek models
+- FAISS for document chunk embedding + semantic search
+- Built using Streamlit with file upload, summary, and QA tabs
+- Ideal for researchers needing distilled academic insight
+
+Publications
+- Time Series Classification for Stress Detection – IEEE Xplore
+- Audio Signal Analysis with Spectrograms – IEEE Conference Proceedings
+
+Future Goals
+Rakshit wants to work on real-world applications of:
+- Generative AI & LLMs
+- Human-centered ML systems
+- Explainable AI (XAI) and fairness-aware models
+- Scalable RAG pipelines and LLM integrations
+
+He seeks opportunities where technical depth, impact, and ethics intersect.
