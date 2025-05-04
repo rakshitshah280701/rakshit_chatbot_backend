@@ -2,101 +2,87 @@
 Rakshit Shah is a 24-year-old Data Scientist and Machine Learning Engineer currently based in San Jose, California. He is passionate about building responsible and explainable AI systems that solve real-world problems.
 
 ## Education
-- M.S. in Computer Science – California State University, East Bay (Expected May 2025), GPA: 3.74/4.00  
-- B.E. in Computer Engineering – AP Shah Institute of Technology, Mumbai University (June 2023), GPA: 8.72/10
+### M.S. in Computer Science – California State University, East Bay
+(Expected May 2025), GPA: 3.74/4.00
+
+### B.E. in Computer Engineering – AP Shah Institute of Technology
+Mumbai University (June 2023), GPA: 8.72/10
 
 ## Profiles
 - GitHub: https://github.com/rakshitshah280701  
 - LinkedIn: https://www.linkedin.com/in/rakshitshah28/
 
-# Technical Skills
-- Languages: Python, R, SQL, Java, Kotlin, C++, JavaScript  
-- Frameworks: TensorFlow, PyTorch, Keras, LangChain, HuggingFace Transformers  
-- Concepts: LLMs, RAG, NLP, RLHF, Deep Learning, MLOps  
-- Databases: FAISS, Pinecone, ChromaDB, MySQL, PostgreSQL, MongoDB, Firebase  
-- DevOps/MLOps: Docker, Kubernetes, CI/CD, FastAPI, Flask, Streamlit  
-- Others: OpenCV, YOLOv8, TensorFlow Lite, Plotly, Bootstrap  
+## Technical Skills
+- **Languages**: Python, R, SQL, Java, Kotlin, C++, JavaScript  
+- **Frameworks**: TensorFlow, PyTorch, Keras, LangChain, HuggingFace Transformers  
+- **Concepts**: LLMs, RAG, NLP, RLHF, Deep Learning, MLOps  
+- **Databases**: FAISS, Pinecone, ChromaDB, MySQL, PostgreSQL, MongoDB, Firebase  
+- **DevOps/MLOps**: Docker, Kubernetes, CI/CD, FastAPI, Flask, Streamlit  
+- **Others**: OpenCV, YOLOv8, TensorFlow Lite, Plotly, Bootstrap
 
-# Internships & Research
+## Internships & Research
 
-## Student Assistant @ CSU East Bay
+### Student Assistant @ CSU East Bay
 - Trained advanced YOLOv8 models for underwater object detection  
 - Built neural networks from scratch with custom bias and threshold strategies  
 - Mentored junior researchers and streamlined model integration pipelines
 
-## ML Intern @ Sciffer Analytics, Pune
+### ML Intern @ Sciffer Analytics, Pune
 - Scraped 50,000+ labeled images using BeautifulSoup/Selenium for YOLO training  
 - Boosted accuracy of object detection models by 15%  
 - Designed preprocessing workflows and optimized annotation pipelines
 
-# Leadership & Volunteering
+## Leadership & Volunteering
 
-## IEEE APSIT Student Branch
-Chairperson & Vice Chair  
+### IEEE APSIT Student Branch – Chairperson & Vice Chair
 - Organized 20+ tech events for 500+ students  
 - Managed a 15-member team and grew engagement through social media campaigns
 
-## IEEE Bombay Section / Region 10
-Design Lead  
+### IEEE Bombay Section / Region 10 – Design Lead
 - Designed branding and digital content for large-scale symposiums  
 - Mentored other student branches in best practices
 
-# Project Portfolio
+## Project Portfolio
 
-## InstructAware – Instructional Scene Understanding
-Built at CSU East Bay to enhance accessibility for visually impaired individuals.  
-- Object detection via YOLOv8  
-- OCR using Google ML Kit  
+### InstructAware – Instructional Scene Understanding
+- Built at CSU East Bay to enhance accessibility for visually impaired individuals.  
+- Object detection via YOLOv8 + OCR using Google ML Kit  
 - Instructional narration via RLHF-tuned LLMs (T5, GPT-3.5, DeepSeek)  
 - Multimodal input: image + bounding box + text  
-- Evaluated using BLEURT, METEOR, USE, BERTScore, COMET  
-- Real-world use case: navigation for low-vision users  
+- Evaluated using BLEURT, METEOR, USE, BERTScore, COMET
 
-## StockSage – NSE Stock Price Prediction Dashboard
-Predicts next-day close prices for Indian stocks.  
-- GRU-based forecasting  
-- Technical indicators: RSI, MACD, Bollinger Bands  
-- NewsData.io integration  
-- Candlestick charts via Plotly  
-- Flask + Bootstrap frontend  
-- FAISS used for semantic financial retrieval  
+### StockSage – NSE Stock Price Prediction Dashboard
+- Predicts next-day close prices for Indian stocks.  
+- GRU-based forecasting + Technical indicators (RSI, MACD, Bollinger Bands)  
+- NewsData.io integration + Candlestick charts (Plotly)  
+- Flask + Bootstrap frontend + FAISS for semantic financial retrieval
 
-## SmartSignNavigation (Android App)
-Mobile app for detecting signs and shop names in real-time.  
-- YOLOv8 + CameraX  
-- TFLite for inference  
-- OCR via Google ML Kit  
-- Kotlin Android app with voice narration  
+### SmartSignNavigation (Android App)
+- Real-time mobile app using YOLOv8 + CameraX  
+- OCR via Google ML Kit and TFLite  
+- Voice narration for detected signs
 
-## Personal Assistant Chatbot
-Conversational assistant trained on Rakshit’s resume.  
-- FAISS-based vector store  
-- Ollama-hosted LLM  
-- FastAPI backend  
+### Personal Assistant Chatbot
+- Trained on Rakshit’s resume  
+- FAISS + Ollama + FastAPI backend  
 - React frontend at www.rakshitai.info  
-- RAG pipeline using LangChain
+- Uses LangChain RAG pipeline
 
-## Vital Organ Health Predictor
-Healthcare web app to analyze heart and organ vitals.  
-- CNN, logistic regression, SVM models  
-- Real-time inference with probability outputs  
-- Flask web UI  
+### Vital Organ Health Predictor
+- CNN, Logistic Regression, and SVM for health diagnostics  
+- Flask web UI with real-time inference
 
-## Research Paper Summarizer
-LLM-powered academic summarizer.  
-- T5-based summarization (with plans for DeepSeek)  
-- FAISS + Streamlit interface  
-- Semantic search and Q&A support  
+### Research Paper Summarizer
+- T5 summarizer with Streamlit UI and FAISS  
+- Supports semantic Q&A and PDF section extraction
 
-# Publications
-- Time Series Classification for Stress Detection – IEEE Xplore  
-- Audio Signal Analysis with Spectrograms – IEEE Conference Proceedings  
+## Publications
+- **Time Series Classification for Stress Detection** – IEEE Xplore  
+- **Audio Signal Analysis with Spectrograms** – IEEE Conference Proceedings
 
-# Future Goals
-Rakshit aims to work on:  
+## Future Goals
+Rakshit aims to work on:
 - Generative AI & LLMs  
 - Human-centered ML systems  
 - Explainable AI (XAI) and fairness-aware models  
-- Scalable RAG pipelines and LLM integrations  
-
-He seeks roles where technical depth, impact, and ethics align.
+- Scalable RAG pipelines and LLM integrations

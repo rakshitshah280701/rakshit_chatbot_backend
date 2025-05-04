@@ -85,34 +85,64 @@
 from langchain_community.vectorstores import FAISS
 from langchain_community.embeddings import HuggingFaceEmbeddings
 from langchain_community.llms import Ollama
-from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain.chains import RetrievalQA
+from langchain.text_splitter import RecursiveCharacterTextSplitter, MarkdownHeaderTextSplitter
+from langchain.schema import Document
 from pathlib import Path
 import os
 
-# Load embedding model
-embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-MiniLM-L6-v2")
-
-# FAISS DB setup
+# Config
+embedding_model = HuggingFaceEmbeddings(model_name="sentence-transformers/all-mpnet-base-v2")
 db_path = "vectorstore/faiss_db"
 index_file = os.path.join(db_path, "index.faiss")
 text_file = "data/rakshit_profile.txt"
 
-# Build FAISS index if not found
+# Function to load and split document with structure-aware chunking
+def load_and_split_document(filepath):
+    full_text = Path(filepath).read_text(encoding='utf-8')
+
+    # Use Markdown headers to segment into logical sections
+    header_splitter = MarkdownHeaderTextSplitter(headers_to_split_on=[
+        ("#", "Header1"),
+        ("##", "Header2"),
+        ("###", "Header3")
+    ])
+    header_chunks = header_splitter.split_text(full_text)
+
+    # Then chunk within each section using character splitter
+    char_splitter = RecursiveCharacterTextSplitter(chunk_size=800, chunk_overlap=100)
+    final_chunks = []
+
+    for chunk in header_chunks:
+        section_text = chunk.page_content
+        section_metadata = chunk.metadata
+        sub_chunks = char_splitter.split_text(section_text)
+        for sub_chunk in sub_chunks:
+            final_chunks.append(Document(page_content=sub_chunk, metadata=section_metadata))
+
+    return final_chunks
+
+# Function to embed and store into FAISS
+def embed_and_store(chunks, db_path="vectorstore/faiss_db"):
+    if not os.path.exists(index_file):
+        Path("vectorstore").mkdir(exist_ok=True)
+        db = FAISS.from_documents(chunks, embedding_model)
+        db.save_local(db_path)
+        print("✅ Created and saved FAISS DB with metadata.")
+    else:
+        print("⚠️ FAISS DB already exists!")
+
+# Main: Create or Load DB
 if not os.path.exists(index_file):
     print("⚠️ FAISS index not found. Creating it...")
-    text = Path(text_file).read_text(encoding='utf-8')
-    splitter = RecursiveCharacterTextSplitter(chunk_size=575, chunk_overlap=100)
-    chunks = splitter.split_text(text)
-    Path("vectorstore").mkdir(exist_ok=True)
-    db = FAISS.from_texts(chunks, embedding_model)
-    db.save_local(db_path)
-    print("✅ FAISS index created and saved.")
+    chunks = load_and_split_document(text_file)
+    embed_and_store(chunks)
 else:
     print("✅ FAISS index found. Loading...")
     db = FAISS.load_local(db_path, embedding_model, allow_dangerous_deserialization=True)
 
-retriever = db.as_retriever()
+# Load retriever and LLM
+retriever = db.as_retriever(search_kwargs={"k": 5})  # FAISS-only retrieval
 llm = Ollama(model="gemma3:1b")
 
 qa_chain = RetrievalQA.from_chain_type(
@@ -121,7 +151,7 @@ qa_chain = RetrievalQA.from_chain_type(
     chain_type="stuff"
 )
 
-# Generate response function
+# Query function
 def generate_response(user_question: str) -> str:
     try:
         docs = retriever.invoke(user_question)
@@ -129,6 +159,8 @@ def generate_response(user_question: str) -> str:
         for i, doc in enumerate(docs):
             print(f"\n--- Chunk {i+1} ---")
             print(doc.page_content)
+            if doc.metadata:
+                print("📌 Metadata:", doc.metadata)
 
         context = "\n\n".join([doc.page_content for doc in docs])
         prompt = f"""
