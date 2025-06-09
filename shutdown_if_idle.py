@@ -78,7 +78,7 @@ try:
 except Exception:
     uptime_seconds = 0
 
-if uptime_seconds < 300:
+if uptime_seconds < IDLE_THRESHOLD_MINUTES * 60:
     log_debug("⏳ Server just started. Skipping shutdown.")
 else:
     if should_shutdown():
