@@ -45,7 +45,7 @@ import os
 
 ACTIVITY_FILE = "/root/.activity"
 DEBUG_LOG = "/root/shutdown_debug.txt"
-IDLE_THRESHOLD_MINUTES = 5  # Shutdown if idle for this many minutes
+IDLE_THRESHOLD_MINUTES = 2  # Shutdown if idle for this many minutes
 
 def log_debug(message):
     timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
